@@ -1,0 +1,17 @@
+@import '../../../styles/settings.scss';
+
+.component {
+    padding: $base-size;
+}
+
+.link {
+    text-decoration: none;
+    color: #333333;
+    font-size: 1em;
+    font-family: "Lato", sans-serif;
+}
+
+.link:hover {
+    color: #262626;
+    font-weight: bold;
+}
