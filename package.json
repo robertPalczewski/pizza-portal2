@@ -2,12 +2,20 @@
   "name": "pizza-portal2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/panel/",
+  "babel": {
+    "plugins": [
+      "transform-react-constant-elements"
+    ]
+  },
   "scripts": {
     "start": "run-p start:* ",
     "start-silent": "run-p start > /dev/null",
     "start:react": "react-scripts start",
+    "start:api": "yarn build && node server.js",
     "start-and-test": "run-p start-silent test ",
     "build": "react-scripts build",
+    "lint": "esw --watch --clear",
     "test": "react-scripts test --noStackTrace",
     "test-all": "react-scripts test --watchAll=false --noStackTrace",
     "test-related": "react-scripts test --watchAll=false --noStackTrace --findRelatedTests",
@@ -40,19 +48,28 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.0",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
+    "json-server": "^0.16.1",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
+    "prop-types": "latest",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "react-test-renderer": "^16.13.0",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "eslint-watch": "^6.0.1",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "redux-devtools-extension": "^2.13.8"
